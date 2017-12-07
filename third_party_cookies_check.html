@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <script>
+      document.cookie="thirdparty=yes";
+      if (!/thirdparty=yes/.test(document.cookie)) {
+        parent.postMessage({
+          event: '3pcookiesdisabled',
+          source: 'gstatic',
+          path: 'third_party_cookies_check.html'
+        }, '*');
+      }
+    </script>
+  </body>
+</html>
